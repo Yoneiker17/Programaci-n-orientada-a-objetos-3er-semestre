@@ -17,7 +17,7 @@ public class FrmVehiculos extends JFrame {
     private JComboBox<String> comboTipo;
     private JTextArea areaSalida;
 
-    // Listas separadas (SIN polimorfismo)
+    
     private ArrayList<Auto> listaAutos;
     private ArrayList<Moto> listaMotos;
     private ArrayList<Camion> listaCamiones;
@@ -29,7 +29,7 @@ public class FrmVehiculos extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // Panel formulario (NORTE)
+       
         JPanel pnlForm = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 10));
         pnlForm.add(new JLabel("Marca:"));
         textMarca = new JTextField(10); pnlForm.add(textMarca);
@@ -56,22 +56,20 @@ public class FrmVehiculos extends JFrame {
 
         add(pnlForm, BorderLayout.NORTH);
 
-        // Area de salida (CENTRO)
+     
         areaSalida = new JTextArea();
         areaSalida.setEditable(false);
         add(new JScrollPane(areaSalida), BorderLayout.CENTER);
 
-        // Inicializar listas
         listaAutos = new ArrayList<>();
         listaMotos = new ArrayList<>();
         listaCamiones = new ArrayList<>();
 
-        // Acciones
         btnAgregar.addActionListener(e -> agregarVehiculo());
         btnMostrar.addActionListener(e -> mostrarVehiculos());
         btnLimpiar.addActionListener(e -> limpiarFormulario());
 
-        // Ajuste de tooltip según tipo
+  
         comboTipo.addActionListener(e -> actualizarTooltip());
 
         actualizarTooltip();
@@ -91,7 +89,6 @@ public class FrmVehiculos extends JFrame {
         String tipo = (String) comboTipo.getSelectedItem();
         String extra = textExtra.getText().trim();
 
-        // Validaciones
         if (marca.isEmpty() || modelo.isEmpty() || anioStr.isEmpty() || extra.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Completa todos los campos.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
@@ -163,4 +160,5 @@ public class FrmVehiculos extends JFrame {
         });
     }
 }
+
 
