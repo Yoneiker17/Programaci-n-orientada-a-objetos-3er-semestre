@@ -1,0 +1,27 @@
+La solución es hacer un sistema de dispositivos inteligentes utilizando  POO
+Cree una clase abstracta llamada SmartDevice, que define los atributos y comportamientos basicos que comparten todos los dispositivos
+
+Cree las subclases requeridas
+
+SmartLight, SmartThermostat y SmartCamera 
+
+Cada una sobrescribe los metodos abstractos para tener un comportamiento propio
+
+Para administrar todos los dispositivos cree una clase llanada ControladorCentral, que mantiene una lista de SmartDevice
+lo que hace este controlador es:
+
+agregar dispositivos
+
+eliminarlos por id
+
+enlistarlos
+
+encender y apagar todos
+
+encender uno solo usando el id
+
+Y tambien en la clase Main se crean varios dispositivos se agregan al controlador y se prueban todas las funciones para mostrar que el sistema funciona correctamente.
+
+espero todo funcione nitido profe
+
+amen.
